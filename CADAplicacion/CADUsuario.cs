@@ -12,7 +12,14 @@ namespace CADAplicacionComercial
         private static UsuarioTableAdapter adaptador = new UsuarioTableAdapter();
         public static bool ValidaUsuario(string IDUsuario, string Clave)
         {
-            return (int)(adaptador.ValidaUsuario(IDUsuario, Clave)) == 1;
+            if (adaptador.ValidaUsuario(IDUsuario, Clave) == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
 
         }
     }
