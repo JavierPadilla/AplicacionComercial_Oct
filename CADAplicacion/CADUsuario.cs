@@ -1,4 +1,4 @@
-﻿using CADAplicacion.DsAplicacionComercial1TableAdapters;
+﻿using CADAplicacion.DsAplicacionComercialTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.Linq;

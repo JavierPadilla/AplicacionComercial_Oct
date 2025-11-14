@@ -16,5 +16,17 @@ namespace AplicacionComercial_Oct2024
         {
             InitializeComponent();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente formCliente = new FrmCliente();  
+            formCliente.MdiParent=this;
+            formCliente.Show();
+        }
+
+        private void FrmPantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
