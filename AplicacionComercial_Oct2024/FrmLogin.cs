@@ -56,5 +56,12 @@ namespace AplicacionComercial_Oct2024
         {
             this.Close();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            TxtUsuario.Text = "zulu";
+            TxtClave.Text = "123";
+     
+        }
     }
 }

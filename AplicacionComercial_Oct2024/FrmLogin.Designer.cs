@@ -44,37 +44,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(25, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(7, 51);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña";
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.Location = new System.Drawing.Point(117, 23);
-            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtUsuario.Location = new System.Drawing.Point(78, 15);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(155, 26);
+            this.TxtUsuario.Size = new System.Drawing.Size(105, 20);
             this.TxtUsuario.TabIndex = 2;
             // 
             // TxtClave
             // 
-            this.TxtClave.Location = new System.Drawing.Point(117, 82);
-            this.TxtClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtClave.Location = new System.Drawing.Point(78, 53);
+            this.TxtClave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.TxtClave.Name = "TxtClave";
-            this.TxtClave.Size = new System.Drawing.Size(155, 26);
+            this.TxtClave.Size = new System.Drawing.Size(105, 20);
             this.TxtClave.TabIndex = 3;
             // 
             // errorProvider1
@@ -84,10 +84,10 @@
             // CmdAceptar
             // 
             this.CmdAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Aceptar2;
-            this.CmdAceptar.Location = new System.Drawing.Point(14, 148);
-            this.CmdAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdAceptar.Location = new System.Drawing.Point(9, 96);
+            this.CmdAceptar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.CmdAceptar.Name = "CmdAceptar";
-            this.CmdAceptar.Size = new System.Drawing.Size(115, 84);
+            this.CmdAceptar.Size = new System.Drawing.Size(77, 55);
             this.CmdAceptar.TabIndex = 4;
             this.CmdAceptar.Text = "&Aceptar";
             this.CmdAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -98,10 +98,10 @@
             // 
             this.CmdCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CmdCancelar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Cancelar;
-            this.CmdCancelar.Location = new System.Drawing.Point(164, 148);
-            this.CmdCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdCancelar.Location = new System.Drawing.Point(109, 96);
+            this.CmdCancelar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.CmdCancelar.Name = "CmdCancelar";
-            this.CmdCancelar.Size = new System.Drawing.Size(106, 84);
+            this.CmdCancelar.Size = new System.Drawing.Size(71, 55);
             this.CmdCancelar.TabIndex = 5;
             this.CmdCancelar.Text = "&Cancelar";
             this.CmdCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -111,10 +111,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Ingreso;
-            this.pictureBox1.Location = new System.Drawing.Point(286, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(191, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -122,10 +122,10 @@
             // FrmLogin
             // 
             this.AcceptButton = this.CmdAceptar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CmdCancelar;
-            this.ClientSize = new System.Drawing.Size(501, 260);
+            this.ClientSize = new System.Drawing.Size(334, 169);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CmdCancelar);
             this.Controls.Add(this.CmdAceptar);
@@ -134,12 +134,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso al Sistema";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

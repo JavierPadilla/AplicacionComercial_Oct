@@ -28,5 +28,13 @@ namespace AplicacionComercial_Oct2024
         {
             Application.Exit();
         }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProveedores formProveedores=new FrmProveedores();
+            formProveedores.MdiParent = this;
+            formProveedores.Show();
+
+        }
     }
 }
