@@ -36,5 +36,30 @@ namespace AplicacionComercial_Oct2024
             formProveedores.Show();
 
         }
+
+
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProducts miFrmProductos = new FrmProducts();
+            miFrmProductos.MdiParent = this;
+            miFrmProductos.Show();
+        }
+
+        private void TsbClientes_Click(object sender, EventArgs e)
+        {
+            clientesToolStripMenuItem_Click(sender,e);
+
+        }
+
+        private void TsbProveedores_Click(object sender, EventArgs e)
+        {
+            proveedoresToolStripMenuItem_Click(sender,e);
+        }
+
+        private void TsbProductos_Click(object sender, EventArgs e)
+        {
+            productosToolStripMenuItem_Click(sender,e);
+        }
     }
 }

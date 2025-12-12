@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPantallaPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bodegasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,12 @@
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.TsbClientes = new System.Windows.Forms.ToolStripButton();
+            this.TsbProveedores = new System.Windows.Forms.ToolStripButton();
+            this.TsbProductos = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -140,6 +146,7 @@
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.productosToolStripMenuItem.Text = "&Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // unidadesDeMeddidaToolStripMenuItem
             // 
@@ -254,21 +261,69 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 22);
             this.ayudaToolStripMenuItem.Text = "A&yuda";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsbClientes,
+            this.TsbProveedores,
+            this.TsbProductos});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
+            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // TsbClientes
+            // 
+            this.TsbClientes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TsbClientes.Image = ((System.Drawing.Image)(resources.GetObject("TsbClientes.Image")));
+            this.TsbClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbClientes.Name = "TsbClientes";
+            this.TsbClientes.Size = new System.Drawing.Size(23, 22);
+            this.TsbClientes.Text = "Clientes";
+            this.TsbClientes.ToolTipText = "Clientes";
+            this.TsbClientes.Click += new System.EventHandler(this.TsbClientes_Click);
+            // 
+            // TsbProveedores
+            // 
+            this.TsbProveedores.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TsbProveedores.Image = ((System.Drawing.Image)(resources.GetObject("TsbProveedores.Image")));
+            this.TsbProveedores.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbProveedores.Name = "TsbProveedores";
+            this.TsbProveedores.Size = new System.Drawing.Size(23, 22);
+            this.TsbProveedores.Text = "Proveedores";
+            this.TsbProveedores.ToolTipText = "Proveedores";
+            this.TsbProveedores.Click += new System.EventHandler(this.TsbProveedores_Click);
+            // 
+            // TsbProductos
+            // 
+            this.TsbProductos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TsbProductos.Image = ((System.Drawing.Image)(resources.GetObject("TsbProductos.Image")));
+            this.TsbProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbProductos.Name = "TsbProductos";
+            this.TsbProductos.Size = new System.Drawing.Size(23, 22);
+            this.TsbProductos.Text = "Proveedores";
+            this.TsbProductos.ToolTipText = "Productos";
+            this.TsbProductos.Click += new System.EventHandler(this.TsbProductos_Click);
+            // 
             // FrmPantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 308);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPantallaPrincipal";
-            this.Text = "FrmPantallaPrincipal";
+            this.Text = "Pantalla Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPantallaPrincipal_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +358,9 @@
         private System.Windows.Forms.ToolStripMenuItem saliidasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trasladosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton TsbClientes;
+        private System.Windows.Forms.ToolStripButton TsbProveedores;
+        private System.Windows.Forms.ToolStripButton TsbProductos;
     }
 }

@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label nombreLabel;
+            System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label notasLabel;
             System.Windows.Forms.Label correoLabel;
             System.Windows.Forms.Label telefono2Label;
             System.Windows.Forms.Label telefono1Label;
-            System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label apellidosContactoLabel;
             System.Windows.Forms.Label nombresContactoLabel;
             System.Windows.Forms.Label documentoLabel;
@@ -46,9 +47,7 @@
             this.tableAdapterManager = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.TableAdapterManager();
             this.tipoDocumentoTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.TipoDocumentoTableAdapter();
             this.proveedorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -58,25 +57,16 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.TsbModificar = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.proveedorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.TsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.TsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.proveedorDataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.notasTextBox = new System.Windows.Forms.TextBox();
-            this.correoTextBox = new System.Windows.Forms.TextBox();
-            this.telefono2TextBox = new System.Windows.Forms.TextBox();
-            this.telefono1TextBox = new System.Windows.Forms.TextBox();
-            this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.apellidosContactoTextBox = new System.Windows.Forms.TextBox();
-            this.nombresContactoTextBox = new System.Windows.Forms.TextBox();
-            this.documentoTextBox = new System.Windows.Forms.TextBox();
-            this.iDTipoDocumentoComboBox = new System.Windows.Forms.ComboBox();
-            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDProveedorTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,11 +75,25 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbxProveedor = new System.Windows.Forms.GroupBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.notasTextBox = new System.Windows.Forms.TextBox();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.telefono2TextBox = new System.Windows.Forms.TextBox();
+            this.telefono1TextBox = new System.Windows.Forms.TextBox();
+            this.apellidosContactoTextBox = new System.Windows.Forms.TextBox();
+            this.nombresContactoTextBox = new System.Windows.Forms.TextBox();
+            this.documentoTextBox = new System.Windows.Forms.TextBox();
+            this.iDTipoDocumentoComboBox = new System.Windows.Forms.ComboBox();
+            this.iDProveedorTextBox = new System.Windows.Forms.TextBox();
+            nombreLabel = new System.Windows.Forms.Label();
+            direccionLabel = new System.Windows.Forms.Label();
             notasLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             telefono2Label = new System.Windows.Forms.Label();
             telefono1Label = new System.Windows.Forms.Label();
-            direccionLabel = new System.Windows.Forms.Label();
             apellidosContactoLabel = new System.Windows.Forms.Label();
             nombresContactoLabel = new System.Windows.Forms.Label();
             documentoLabel = new System.Windows.Forms.Label();
@@ -100,14 +104,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingNavigator)).BeginInit();
             this.proveedorBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataGridView)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.gbxProveedor.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(13, 90);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(51, 13);
+            nombreLabel.TabIndex = 45;
+            nombreLabel.Text = "*Nombre:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Location = new System.Drawing.Point(379, 90);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.TabIndex = 43;
+            direccionLabel.Text = "Direccion:";
             // 
             // notasLabel
             // 
             notasLabel.AutoSize = true;
-            notasLabel.Location = new System.Drawing.Point(7, 125);
+            notasLabel.Location = new System.Drawing.Point(396, 121);
             notasLabel.Name = "notasLabel";
             notasLabel.Size = new System.Drawing.Size(38, 13);
             notasLabel.TabIndex = 40;
@@ -116,7 +139,7 @@
             // correoLabel
             // 
             correoLabel.AutoSize = true;
-            correoLabel.Location = new System.Drawing.Point(618, 90);
+            correoLabel.Location = new System.Drawing.Point(13, 124);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(41, 13);
             correoLabel.TabIndex = 38;
@@ -125,7 +148,7 @@
             // telefono2Label
             // 
             telefono2Label.AutoSize = true;
-            telefono2Label.Location = new System.Drawing.Point(713, 56);
+            telefono2Label.Location = new System.Drawing.Point(713, 90);
             telefono2Label.Name = "telefono2Label";
             telefono2Label.Size = new System.Drawing.Size(58, 13);
             telefono2Label.TabIndex = 36;
@@ -134,56 +157,47 @@
             // telefono1Label
             // 
             telefono1Label.AutoSize = true;
-            telefono1Label.Location = new System.Drawing.Point(713, 22);
+            telefono1Label.Location = new System.Drawing.Point(713, 61);
             telefono1Label.Name = "telefono1Label";
             telefono1Label.Size = new System.Drawing.Size(58, 13);
             telefono1Label.TabIndex = 34;
             telefono1Label.Text = "Telefono1:";
             // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(7, 90);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
-            direccionLabel.TabIndex = 32;
-            direccionLabel.Text = "Direccion:";
-            // 
             // apellidosContactoLabel
             // 
             apellidosContactoLabel.AutoSize = true;
-            apellidosContactoLabel.Location = new System.Drawing.Point(366, 56);
+            apellidosContactoLabel.Location = new System.Drawing.Point(365, 57);
             apellidosContactoLabel.Name = "apellidosContactoLabel";
-            apellidosContactoLabel.Size = new System.Drawing.Size(98, 13);
+            apellidosContactoLabel.Size = new System.Drawing.Size(102, 13);
             apellidosContactoLabel.TabIndex = 30;
-            apellidosContactoLabel.Text = "Apellidos Contacto:";
+            apellidosContactoLabel.Text = "*Apellidos Contacto:";
             // 
             // nombresContactoLabel
             // 
             nombresContactoLabel.AutoSize = true;
-            nombresContactoLabel.Location = new System.Drawing.Point(7, 56);
+            nombresContactoLabel.Location = new System.Drawing.Point(6, 57);
             nombresContactoLabel.Name = "nombresContactoLabel";
-            nombresContactoLabel.Size = new System.Drawing.Size(98, 13);
+            nombresContactoLabel.Size = new System.Drawing.Size(102, 13);
             nombresContactoLabel.TabIndex = 28;
-            nombresContactoLabel.Text = "Nombres Contacto:";
+            nombresContactoLabel.Text = "*Nombres Contacto:";
             // 
             // documentoLabel
             // 
             documentoLabel.AutoSize = true;
             documentoLabel.Location = new System.Drawing.Point(490, 22);
             documentoLabel.Name = "documentoLabel";
-            documentoLabel.Size = new System.Drawing.Size(65, 13);
+            documentoLabel.Size = new System.Drawing.Size(69, 13);
             documentoLabel.TabIndex = 26;
-            documentoLabel.Text = "Documento:";
+            documentoLabel.Text = "*Documento:";
             // 
             // iDTipoDocumentoLabel
             // 
             iDTipoDocumentoLabel.AutoSize = true;
             iDTipoDocumentoLabel.Location = new System.Drawing.Point(197, 22);
             iDTipoDocumentoLabel.Name = "iDTipoDocumentoLabel";
-            iDTipoDocumentoLabel.Size = new System.Drawing.Size(100, 13);
+            iDTipoDocumentoLabel.Size = new System.Drawing.Size(93, 13);
             iDTipoDocumentoLabel.TabIndex = 24;
-            iDTipoDocumentoLabel.Text = "IDTipo Documento:";
+            iDTipoDocumentoLabel.Text = "*Tipo Documento:";
             // 
             // iDProveedorLabel
             // 
@@ -267,10 +281,10 @@
             // 
             // proveedorBindingNavigator
             // 
-            this.proveedorBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.proveedorBindingNavigator.AddNewItem = null;
             this.proveedorBindingNavigator.BindingSource = this.proveedorBindingSource;
             this.proveedorBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.proveedorBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.proveedorBindingNavigator.DeleteItem = null;
             this.proveedorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -294,20 +308,9 @@
             this.proveedorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.proveedorBindingNavigator.Name = "proveedorBindingNavigator";
             this.proveedorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.proveedorBindingNavigator.Size = new System.Drawing.Size(923, 25);
+            this.proveedorBindingNavigator.Size = new System.Drawing.Size(939, 25);
             this.proveedorBindingNavigator.TabIndex = 0;
             this.proveedorBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.ToolTipText = "Agregar nuevo Registro";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -315,17 +318,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            this.bindingNavigatorDeleteItem.ToolTipText = "Eliminar Registro";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -399,6 +391,28 @@
             this.TsbModificar.ToolTipText = "Modifiacar Registro";
             this.TsbModificar.Click += new System.EventHandler(this.TsbModificar_Click);
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.ToolTipText = "Agregar nuevo Registro";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.ToolTipText = "Eliminar Registro";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
             // proveedorBindingNavigatorSaveItem
             // 
             this.proveedorBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -413,7 +427,7 @@
             // 
             this.TsbCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TsbCancelar.Enabled = false;
-            this.TsbCancelar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Cancelar;
+            this.TsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("TsbCancelar.Image")));
             this.TsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbCancelar.Name = "TsbCancelar";
             this.TsbCancelar.Size = new System.Drawing.Size(23, 22);
@@ -430,6 +444,7 @@
             this.TsbBuscar.Size = new System.Drawing.Size(23, 22);
             this.TsbBuscar.Text = "toolStripButton2";
             this.TsbBuscar.ToolTipText = "Buscar Un Registro";
+            this.TsbBuscar.Click += new System.EventHandler(this.TsbBuscar_Click);
             // 
             // proveedorDataGridView
             // 
@@ -454,140 +469,11 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.proveedorDataGridView.DataSource = this.proveedorBindingSource;
-            this.proveedorDataGridView.Location = new System.Drawing.Point(12, 223);
+            this.proveedorDataGridView.Location = new System.Drawing.Point(12, 216);
             this.proveedorDataGridView.Name = "proveedorDataGridView";
             this.proveedorDataGridView.ReadOnly = true;
-            this.proveedorDataGridView.Size = new System.Drawing.Size(876, 267);
+            this.proveedorDataGridView.Size = new System.Drawing.Size(913, 276);
             this.proveedorDataGridView.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(notasLabel);
-            this.groupBox1.Controls.Add(this.notasTextBox);
-            this.groupBox1.Controls.Add(correoLabel);
-            this.groupBox1.Controls.Add(this.correoTextBox);
-            this.groupBox1.Controls.Add(telefono2Label);
-            this.groupBox1.Controls.Add(this.telefono2TextBox);
-            this.groupBox1.Controls.Add(telefono1Label);
-            this.groupBox1.Controls.Add(this.telefono1TextBox);
-            this.groupBox1.Controls.Add(direccionLabel);
-            this.groupBox1.Controls.Add(this.direccionTextBox);
-            this.groupBox1.Controls.Add(apellidosContactoLabel);
-            this.groupBox1.Controls.Add(this.apellidosContactoTextBox);
-            this.groupBox1.Controls.Add(nombresContactoLabel);
-            this.groupBox1.Controls.Add(this.nombresContactoTextBox);
-            this.groupBox1.Controls.Add(documentoLabel);
-            this.groupBox1.Controls.Add(this.documentoTextBox);
-            this.groupBox1.Controls.Add(iDTipoDocumentoLabel);
-            this.groupBox1.Controls.Add(this.iDTipoDocumentoComboBox);
-            this.groupBox1.Controls.Add(iDProveedorLabel);
-            this.groupBox1.Controls.Add(this.iDProveedorTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 37);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(895, 180);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // notasTextBox
-            // 
-            this.notasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Notas", true));
-            this.notasTextBox.Location = new System.Drawing.Point(51, 122);
-            this.notasTextBox.Multiline = true;
-            this.notasTextBox.Name = "notasTextBox";
-            this.notasTextBox.ReadOnly = true;
-            this.notasTextBox.Size = new System.Drawing.Size(826, 46);
-            this.notasTextBox.TabIndex = 41;
-            // 
-            // correoTextBox
-            // 
-            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(665, 87);
-            this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.ReadOnly = true;
-            this.correoTextBox.Size = new System.Drawing.Size(212, 20);
-            this.correoTextBox.TabIndex = 39;
-            // 
-            // telefono2TextBox
-            // 
-            this.telefono2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Telefono2", true));
-            this.telefono2TextBox.Location = new System.Drawing.Point(777, 53);
-            this.telefono2TextBox.Name = "telefono2TextBox";
-            this.telefono2TextBox.ReadOnly = true;
-            this.telefono2TextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefono2TextBox.TabIndex = 37;
-            // 
-            // telefono1TextBox
-            // 
-            this.telefono1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Telefono1", true));
-            this.telefono1TextBox.Location = new System.Drawing.Point(777, 19);
-            this.telefono1TextBox.Name = "telefono1TextBox";
-            this.telefono1TextBox.ReadOnly = true;
-            this.telefono1TextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefono1TextBox.TabIndex = 35;
-            // 
-            // direccionTextBox
-            // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(68, 87);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.ReadOnly = true;
-            this.direccionTextBox.Size = new System.Drawing.Size(519, 20);
-            this.direccionTextBox.TabIndex = 33;
-            // 
-            // apellidosContactoTextBox
-            // 
-            this.apellidosContactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "ApellidosContacto", true));
-            this.apellidosContactoTextBox.Location = new System.Drawing.Point(470, 53);
-            this.apellidosContactoTextBox.Name = "apellidosContactoTextBox";
-            this.apellidosContactoTextBox.ReadOnly = true;
-            this.apellidosContactoTextBox.Size = new System.Drawing.Size(222, 20);
-            this.apellidosContactoTextBox.TabIndex = 31;
-            // 
-            // nombresContactoTextBox
-            // 
-            this.nombresContactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "NombresContacto", true));
-            this.nombresContactoTextBox.Location = new System.Drawing.Point(111, 53);
-            this.nombresContactoTextBox.Name = "nombresContactoTextBox";
-            this.nombresContactoTextBox.ReadOnly = true;
-            this.nombresContactoTextBox.Size = new System.Drawing.Size(235, 20);
-            this.nombresContactoTextBox.TabIndex = 29;
-            // 
-            // documentoTextBox
-            // 
-            this.documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Documento", true));
-            this.documentoTextBox.Location = new System.Drawing.Point(561, 19);
-            this.documentoTextBox.Name = "documentoTextBox";
-            this.documentoTextBox.ReadOnly = true;
-            this.documentoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.documentoTextBox.TabIndex = 27;
-            // 
-            // iDTipoDocumentoComboBox
-            // 
-            this.iDTipoDocumentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.proveedorBindingSource, "IDTipoDocumento", true));
-            this.iDTipoDocumentoComboBox.DataSource = this.tipoDocumentoBindingSource;
-            this.iDTipoDocumentoComboBox.DisplayMember = "Descripcion";
-            this.iDTipoDocumentoComboBox.Enabled = false;
-            this.iDTipoDocumentoComboBox.FormattingEnabled = true;
-            this.iDTipoDocumentoComboBox.Location = new System.Drawing.Point(303, 19);
-            this.iDTipoDocumentoComboBox.Name = "iDTipoDocumentoComboBox";
-            this.iDTipoDocumentoComboBox.Size = new System.Drawing.Size(152, 21);
-            this.iDTipoDocumentoComboBox.TabIndex = 25;
-            this.iDTipoDocumentoComboBox.ValueMember = "IDTipoDocumento";
-            // 
-            // tipoDocumentoBindingSource
-            // 
-            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
-            this.tipoDocumentoBindingSource.DataSource = this.dsAplicacionComercialxsd;
-            // 
-            // iDProveedorTextBox
-            // 
-            this.iDProveedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "IDProveedor", true));
-            this.iDProveedorTextBox.Location = new System.Drawing.Point(83, 19);
-            this.iDProveedorTextBox.Name = "iDProveedorTextBox";
-            this.iDProveedorTextBox.ReadOnly = true;
-            this.iDProveedorTextBox.Size = new System.Drawing.Size(66, 20);
-            this.iDProveedorTextBox.TabIndex = 23;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -614,6 +500,11 @@
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "IDTipoDocumento";
+            // 
+            // tipoDocumentoBindingSource
+            // 
+            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
+            this.tipoDocumentoBindingSource.DataSource = this.dsAplicacionComercialxsd;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -671,12 +562,152 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // gbxProveedor
+            // 
+            this.gbxProveedor.Controls.Add(nombreLabel);
+            this.gbxProveedor.Controls.Add(this.nombreTextBox);
+            this.gbxProveedor.Controls.Add(direccionLabel);
+            this.gbxProveedor.Controls.Add(this.direccionTextBox);
+            this.gbxProveedor.Controls.Add(notasLabel);
+            this.gbxProveedor.Controls.Add(this.notasTextBox);
+            this.gbxProveedor.Controls.Add(correoLabel);
+            this.gbxProveedor.Controls.Add(this.correoTextBox);
+            this.gbxProveedor.Controls.Add(telefono2Label);
+            this.gbxProveedor.Controls.Add(this.telefono2TextBox);
+            this.gbxProveedor.Controls.Add(telefono1Label);
+            this.gbxProveedor.Controls.Add(this.telefono1TextBox);
+            this.gbxProveedor.Controls.Add(apellidosContactoLabel);
+            this.gbxProveedor.Controls.Add(this.apellidosContactoTextBox);
+            this.gbxProveedor.Controls.Add(nombresContactoLabel);
+            this.gbxProveedor.Controls.Add(this.nombresContactoTextBox);
+            this.gbxProveedor.Controls.Add(documentoLabel);
+            this.gbxProveedor.Controls.Add(this.documentoTextBox);
+            this.gbxProveedor.Controls.Add(iDTipoDocumentoLabel);
+            this.gbxProveedor.Controls.Add(this.iDTipoDocumentoComboBox);
+            this.gbxProveedor.Controls.Add(iDProveedorLabel);
+            this.gbxProveedor.Controls.Add(this.iDProveedorTextBox);
+            this.gbxProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gbxProveedor.Location = new System.Drawing.Point(12, 37);
+            this.gbxProveedor.Name = "gbxProveedor";
+            this.gbxProveedor.Size = new System.Drawing.Size(897, 173);
+            this.gbxProveedor.TabIndex = 4;
+            this.gbxProveedor.TabStop = false;
+            this.gbxProveedor.Text = "DATOS DEL PROVEEDOR";
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(66, 87);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.ReadOnly = true;
+            this.nombreTextBox.Size = new System.Drawing.Size(307, 20);
+            this.nombreTextBox.TabIndex = 46;
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Direccion", true));
+            this.direccionTextBox.Location = new System.Drawing.Point(440, 87);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.ReadOnly = true;
+            this.direccionTextBox.Size = new System.Drawing.Size(235, 20);
+            this.direccionTextBox.TabIndex = 44;
+            // 
+            // notasTextBox
+            // 
+            this.notasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Notas", true));
+            this.notasTextBox.Location = new System.Drawing.Point(440, 121);
+            this.notasTextBox.Multiline = true;
+            this.notasTextBox.Name = "notasTextBox";
+            this.notasTextBox.ReadOnly = true;
+            this.notasTextBox.Size = new System.Drawing.Size(422, 37);
+            this.notasTextBox.TabIndex = 41;
+            // 
+            // correoTextBox
+            // 
+            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Correo", true));
+            this.correoTextBox.Location = new System.Drawing.Point(66, 117);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.ReadOnly = true;
+            this.correoTextBox.Size = new System.Drawing.Size(261, 20);
+            this.correoTextBox.TabIndex = 39;
+            // 
+            // telefono2TextBox
+            // 
+            this.telefono2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Telefono2", true));
+            this.telefono2TextBox.Location = new System.Drawing.Point(777, 87);
+            this.telefono2TextBox.Name = "telefono2TextBox";
+            this.telefono2TextBox.ReadOnly = true;
+            this.telefono2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefono2TextBox.TabIndex = 37;
+            // 
+            // telefono1TextBox
+            // 
+            this.telefono1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Telefono1", true));
+            this.telefono1TextBox.Location = new System.Drawing.Point(777, 57);
+            this.telefono1TextBox.Name = "telefono1TextBox";
+            this.telefono1TextBox.ReadOnly = true;
+            this.telefono1TextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefono1TextBox.TabIndex = 35;
+            // 
+            // apellidosContactoTextBox
+            // 
+            this.apellidosContactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "ApellidosContacto", true));
+            this.apellidosContactoTextBox.Location = new System.Drawing.Point(469, 54);
+            this.apellidosContactoTextBox.Name = "apellidosContactoTextBox";
+            this.apellidosContactoTextBox.ReadOnly = true;
+            this.apellidosContactoTextBox.Size = new System.Drawing.Size(222, 20);
+            this.apellidosContactoTextBox.TabIndex = 31;
+            // 
+            // nombresContactoTextBox
+            // 
+            this.nombresContactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "NombresContacto", true));
+            this.nombresContactoTextBox.Location = new System.Drawing.Point(110, 54);
+            this.nombresContactoTextBox.Name = "nombresContactoTextBox";
+            this.nombresContactoTextBox.ReadOnly = true;
+            this.nombresContactoTextBox.Size = new System.Drawing.Size(235, 20);
+            this.nombresContactoTextBox.TabIndex = 29;
+            // 
+            // documentoTextBox
+            // 
+            this.documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Documento", true));
+            this.documentoTextBox.Location = new System.Drawing.Point(561, 19);
+            this.documentoTextBox.Name = "documentoTextBox";
+            this.documentoTextBox.ReadOnly = true;
+            this.documentoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.documentoTextBox.TabIndex = 27;
+            // 
+            // iDTipoDocumentoComboBox
+            // 
+            this.iDTipoDocumentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.proveedorBindingSource, "IDTipoDocumento", true));
+            this.iDTipoDocumentoComboBox.DataSource = this.tipoDocumentoBindingSource;
+            this.iDTipoDocumentoComboBox.DisplayMember = "Descripcion";
+            this.iDTipoDocumentoComboBox.Enabled = false;
+            this.iDTipoDocumentoComboBox.FormattingEnabled = true;
+            this.iDTipoDocumentoComboBox.Location = new System.Drawing.Point(312, 19);
+            this.iDTipoDocumentoComboBox.Name = "iDTipoDocumentoComboBox";
+            this.iDTipoDocumentoComboBox.Size = new System.Drawing.Size(152, 21);
+            this.iDTipoDocumentoComboBox.TabIndex = 25;
+            this.iDTipoDocumentoComboBox.ValueMember = "IDTipoDocumento";
+            // 
+            // iDProveedorTextBox
+            // 
+            this.iDProveedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "IDProveedor", true));
+            this.iDProveedorTextBox.Location = new System.Drawing.Point(83, 19);
+            this.iDProveedorTextBox.Name = "iDProveedorTextBox";
+            this.iDProveedorTextBox.ReadOnly = true;
+            this.iDProveedorTextBox.Size = new System.Drawing.Size(66, 20);
+            this.iDProveedorTextBox.TabIndex = 23;
+            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 502);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(939, 547);
+            this.Controls.Add(this.gbxProveedor);
             this.Controls.Add(this.proveedorDataGridView);
             this.Controls.Add(this.proveedorBindingNavigator);
             this.Name = "FrmProveedores";
@@ -688,9 +719,10 @@
             this.proveedorBindingNavigator.ResumeLayout(false);
             this.proveedorBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataGridView)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.gbxProveedor.ResumeLayout(false);
+            this.gbxProveedor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -717,17 +749,6 @@
         private System.Windows.Forms.ToolStripButton proveedorBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView proveedorDataGridView;
         private DsAplicacionComercialxsdTableAdapters.TipoDocumentoTableAdapter tipoDocumentoTableAdapter;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox notasTextBox;
-        private System.Windows.Forms.TextBox correoTextBox;
-        private System.Windows.Forms.TextBox telefono2TextBox;
-        private System.Windows.Forms.TextBox telefono1TextBox;
-        private System.Windows.Forms.TextBox direccionTextBox;
-        private System.Windows.Forms.TextBox apellidosContactoTextBox;
-        private System.Windows.Forms.TextBox nombresContactoTextBox;
-        private System.Windows.Forms.TextBox documentoTextBox;
-        private System.Windows.Forms.ComboBox iDTipoDocumentoComboBox;
-        private System.Windows.Forms.TextBox iDProveedorTextBox;
         private System.Windows.Forms.BindingSource tipoDocumentoBindingSource;
         private System.Windows.Forms.ToolStripButton TsbCancelar;
         private System.Windows.Forms.ToolStripButton TsbModificar;
@@ -743,5 +764,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox gbxProveedor;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox direccionTextBox;
+        private System.Windows.Forms.TextBox notasTextBox;
+        private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.TextBox telefono2TextBox;
+        private System.Windows.Forms.TextBox telefono1TextBox;
+        private System.Windows.Forms.TextBox apellidosContactoTextBox;
+        private System.Windows.Forms.TextBox nombresContactoTextBox;
+        private System.Windows.Forms.TextBox documentoTextBox;
+        private System.Windows.Forms.ComboBox iDTipoDocumentoComboBox;
+        private System.Windows.Forms.TextBox iDProveedorTextBox;
     }
 }

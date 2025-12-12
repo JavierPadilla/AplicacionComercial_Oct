@@ -1,4 +1,6 @@
-﻿using CADAplicacion;
+﻿using AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters;
+using CADAplicacion;
+using CADAplicacion.DsAplicacionComercialTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +17,8 @@ namespace AplicacionComercial_Oct2024
     public partial class FrmCliente : Form
     {
         private int i=0;
-        bool Modificar = false;
         bool Nuevo = false;
+      
         public FrmCliente()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace AplicacionComercial_Oct2024
             this.tipoDocumentoTableAdapter.Fill(this.dsAplicacionComercialxsd.TipoDocumento);
             //Rellena datagriv Clientes con el metodo get data  de la clase cad cliente.
             DgvClientes.DataSource = CADCliente.getData();
+     
             //Llamar metodo para mostrar registros en texbox y otros
 
             MostrarRegistro();
@@ -94,10 +97,9 @@ namespace AplicacionComercial_Oct2024
 
         private void TsbModificar_Click(object sender, EventArgs e)
         {
-            Modificar = true;
             Nuevo = false;
             HabilitarCampos();
-            Modificar = true;
+           
         }
 
         private void HabilitarCampos()
@@ -195,6 +197,19 @@ namespace AplicacionComercial_Oct2024
                 return false;
             }
             errorProvider1.SetError(DtpAniversario, "");
+
+            if (TxtCorreo.Text != "")
+            {
+                RegexUtilities regexUtilities = new RegexUtilities();
+                if (!regexUtilities.IsValidEmail(TxtCorreo.Text))
+                {
+                    errorProvider1.SetError(TxtCorreo, "Debe ingresar un CORREO VALIDO ");
+                    TxtCorreo.Focus();
+                    return false;
+                }
+                errorProvider1.SetError(TxtCorreo, "");
+               
+            }
             return true;
         }
 
@@ -229,7 +244,6 @@ namespace AplicacionComercial_Oct2024
         private void TsbNuevo_Click(object sender, EventArgs e)
         {
             Nuevo = true;
-            Modificar = false;
             HabilitarCampos();
             LimpiarCampos();
         }
@@ -291,5 +305,16 @@ namespace AplicacionComercial_Oct2024
             MostrarRegistro();
 
         }
+
+        private void TsbBuscar_Click(object sender, EventArgs e)
+        {
+            FrmBusquedaCliente frmBuscar =new FrmBusquedaCliente();
+            frmBuscar.ShowDialog();
+            DgvClientes.DataSource = CADCliente.GetCliente(frmBuscar.IdCliente);
+
+
+        }
+
+
     }
 }

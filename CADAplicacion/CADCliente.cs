@@ -11,6 +11,7 @@ namespace CADAplicacion
     public class CADCliente
     {
         private static ClienteTableAdapter adaptador = new ClienteTableAdapter();
+        private static ClienteTableAdapter buscador = new ClienteTableAdapter();
         public static DsAplicacionComercial.ClienteDataTable getData()
         {
             return adaptador.GetData();
@@ -37,6 +38,12 @@ namespace CADAplicacion
         public static void DeleteCliente(int IDCliente)
         {
             adaptador.DeleteCliente(IDCliente);
+        }
+        public static DsAplicacionComercial.ClienteDataTable GetCliente(int IDCliente)
+        {
+
+            return buscador.GetCliente(IDCliente);
+
         }
     }
 }

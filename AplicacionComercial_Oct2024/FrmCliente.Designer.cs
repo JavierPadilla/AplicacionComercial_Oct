@@ -217,6 +217,7 @@
             this.TsbBuscar.Name = "TsbBuscar";
             this.TsbBuscar.Size = new System.Drawing.Size(28, 28);
             this.TsbBuscar.ToolTipText = "Buscar un Registro";
+            this.TsbBuscar.Click += new System.EventHandler(this.TsbBuscar_Click);
             // 
             // groupBox1
             // 

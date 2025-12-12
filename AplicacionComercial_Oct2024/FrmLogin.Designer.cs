@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
@@ -64,7 +65,7 @@
             // TxtUsuario
             // 
             this.TxtUsuario.Location = new System.Drawing.Point(78, 15);
-            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(1);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(105, 20);
             this.TxtUsuario.TabIndex = 2;
@@ -72,7 +73,7 @@
             // TxtClave
             // 
             this.TxtClave.Location = new System.Drawing.Point(78, 53);
-            this.TxtClave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtClave.Margin = new System.Windows.Forms.Padding(1);
             this.TxtClave.Name = "TxtClave";
             this.TxtClave.Size = new System.Drawing.Size(105, 20);
             this.TxtClave.TabIndex = 3;
@@ -83,9 +84,9 @@
             // 
             // CmdAceptar
             // 
-            this.CmdAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Aceptar2;
+            this.CmdAceptar.Image = ((System.Drawing.Image)(resources.GetObject("CmdAceptar.Image")));
             this.CmdAceptar.Location = new System.Drawing.Point(9, 96);
-            this.CmdAceptar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CmdAceptar.Margin = new System.Windows.Forms.Padding(1);
             this.CmdAceptar.Name = "CmdAceptar";
             this.CmdAceptar.Size = new System.Drawing.Size(77, 55);
             this.CmdAceptar.TabIndex = 4;
@@ -97,9 +98,9 @@
             // CmdCancelar
             // 
             this.CmdCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CmdCancelar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Cancelar;
+            this.CmdCancelar.Image = ((System.Drawing.Image)(resources.GetObject("CmdCancelar.Image")));
             this.CmdCancelar.Location = new System.Drawing.Point(109, 96);
-            this.CmdCancelar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CmdCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.CmdCancelar.Name = "CmdCancelar";
             this.CmdCancelar.Size = new System.Drawing.Size(71, 55);
             this.CmdCancelar.TabIndex = 5;
@@ -110,9 +111,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Ingreso;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(191, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(137, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +135,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
