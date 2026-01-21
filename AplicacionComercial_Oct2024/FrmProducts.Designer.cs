@@ -40,6 +40,7 @@
             System.Windows.Forms.Label iDProductoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProducts));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dsAplicacionComercialxsd = new AplicacionComercial_Oct2024.DsAplicacionComercialxsd();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.ProductoTableAdapter();
@@ -76,6 +77,12 @@
             this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.gbxBarras = new System.Windows.Forms.GroupBox();
             this.BarraDataGridView = new System.Windows.Forms.DataGridView();
             this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -443,6 +450,7 @@
             this.bindingNavigatorShearchItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorShearchItem.Text = "Buscar";
             this.bindingNavigatorShearchItem.ToolTipText = "Buscar Registro";
+            this.bindingNavigatorShearchItem.Click += new System.EventHandler(this.bindingNavigatorShearchItem_Click);
             // 
             // productoDataGridView
             // 
@@ -462,10 +470,10 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.productoDataGridView.DataSource = this.productoBindingSource;
-            this.productoDataGridView.Location = new System.Drawing.Point(12, 314);
+            this.productoDataGridView.Location = new System.Drawing.Point(12, 376);
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.ReadOnly = true;
-            this.productoDataGridView.Size = new System.Drawing.Size(1071, 226);
+            this.productoDataGridView.Size = new System.Drawing.Size(1080, 235);
             this.productoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -584,6 +592,12 @@
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.btnBuscar);
+            this.gbxDatos.Controls.Add(this.btnEliminar);
+            this.gbxDatos.Controls.Add(this.btnNuevo);
+            this.gbxDatos.Controls.Add(this.btnModificar);
+            this.gbxDatos.Controls.Add(this.btnCancelar);
+            this.gbxDatos.Controls.Add(this.btnAceptar);
             this.gbxDatos.Controls.Add(this.gbxBarras);
             this.gbxDatos.Controls.Add(this.gbxBodegas);
             this.gbxDatos.Controls.Add(this.btnAgregarBodega);
@@ -611,10 +625,85 @@
             this.gbxDatos.Controls.Add(this.iDProductoTextBox);
             this.gbxDatos.Location = new System.Drawing.Point(12, 28);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(1080, 284);
+            this.gbxDatos.Size = new System.Drawing.Size(1080, 342);
             this.gbxDatos.TabIndex = 29;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos del producto";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(594, 284);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(102, 52);
+            this.btnBuscar.TabIndex = 52;
+            this.btnBuscar.Text = "B&uscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Borrar2;
+            this.btnEliminar.Location = new System.Drawing.Point(246, 284);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(102, 52);
+            this.btnEliminar.TabIndex = 51;
+            this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Nuevo;
+            this.btnNuevo.Location = new System.Drawing.Point(125, 284);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(102, 52);
+            this.btnNuevo.TabIndex = 50;
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Modificar;
+            this.btnModificar.Location = new System.Drawing.Point(11, 284);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(102, 52);
+            this.btnModificar.TabIndex = 49;
+            this.btnModificar.Text = "&Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(484, 284);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(102, 52);
+            this.btnCancelar.TabIndex = 48;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Enabled = false;
+            this.btnAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Aceptar2;
+            this.btnAceptar.Location = new System.Drawing.Point(372, 284);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(102, 52);
+            this.btnAceptar.TabIndex = 47;
+            this.btnAceptar.Text = "&Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // gbxBarras
             // 
@@ -637,12 +726,11 @@
             this.iDProductoDataGridViewTextBoxColumn,
             this.barraDataGridViewTextBoxColumn});
             this.BarraDataGridView.DataSource = this.barraBindingSource;
-            this.BarraDataGridView.Location = new System.Drawing.Point(11, 13);
+            this.BarraDataGridView.Location = new System.Drawing.Point(17, 15);
             this.BarraDataGridView.Name = "BarraDataGridView";
             this.BarraDataGridView.ReadOnly = true;
             this.BarraDataGridView.Size = new System.Drawing.Size(363, 98);
             this.BarraDataGridView.TabIndex = 29;
-            this.BarraDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BarraDataGridView_CellContentClick);
             // 
             // iDProductoDataGridViewTextBoxColumn
             // 
@@ -650,10 +738,14 @@
             this.iDProductoDataGridViewTextBoxColumn.HeaderText = "IDProducto";
             this.iDProductoDataGridViewTextBoxColumn.Name = "iDProductoDataGridViewTextBoxColumn";
             this.iDProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDProductoDataGridViewTextBoxColumn.Visible = false;
             // 
             // barraDataGridViewTextBoxColumn
             // 
             this.barraDataGridViewTextBoxColumn.DataPropertyName = "Barra";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.barraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.barraDataGridViewTextBoxColumn.HeaderText = "Barra";
             this.barraDataGridViewTextBoxColumn.Name = "barraDataGridViewTextBoxColumn";
             this.barraDataGridViewTextBoxColumn.ReadOnly = true;
@@ -702,32 +794,35 @@
             // btnAgregarBodega
             // 
             this.btnAgregarBodega.Enabled = false;
-            this.btnAgregarBodega.Location = new System.Drawing.Point(477, 124);
+            this.btnAgregarBodega.Location = new System.Drawing.Point(479, 124);
             this.btnAgregarBodega.Name = "btnAgregarBodega";
-            this.btnAgregarBodega.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarBodega.Size = new System.Drawing.Size(102, 23);
             this.btnAgregarBodega.TabIndex = 45;
-            this.btnAgregarBodega.Text = "&Agregar";
+            this.btnAgregarBodega.Text = "Agregar Bode&ga";
             this.btnAgregarBodega.UseVisualStyleBackColor = true;
+            this.btnAgregarBodega.Click += new System.EventHandler(this.btnAgregarBodega_Click);
             // 
             // btnEliminarBarra
             // 
             this.btnEliminarBarra.Enabled = false;
-            this.btnEliminarBarra.Location = new System.Drawing.Point(310, 124);
+            this.btnEliminarBarra.Location = new System.Drawing.Point(305, 124);
             this.btnEliminarBarra.Name = "btnEliminarBarra";
-            this.btnEliminarBarra.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarBarra.Size = new System.Drawing.Size(94, 23);
             this.btnEliminarBarra.TabIndex = 44;
-            this.btnEliminarBarra.Text = "&Eliminar";
+            this.btnEliminarBarra.Text = "Elimina&r Barra";
             this.btnEliminarBarra.UseVisualStyleBackColor = true;
+            this.btnEliminarBarra.Click += new System.EventHandler(this.btnEliminarBarra_Click);
             // 
             // btnAgregarBarra
             // 
             this.btnAgregarBarra.Enabled = false;
-            this.btnAgregarBarra.Location = new System.Drawing.Point(205, 124);
+            this.btnAgregarBarra.Location = new System.Drawing.Point(200, 124);
             this.btnAgregarBarra.Name = "btnAgregarBarra";
-            this.btnAgregarBarra.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarBarra.Size = new System.Drawing.Size(99, 23);
             this.btnAgregarBarra.TabIndex = 43;
-            this.btnAgregarBarra.Text = "&Agregar";
+            this.btnAgregarBarra.Text = "Agregar &Barra";
             this.btnAgregarBarra.UseVisualStyleBackColor = true;
+            this.btnAgregarBarra.Click += new System.EventHandler(this.btnAgregarBarra_Click);
             // 
             // BtnSeleccionar
             // 
@@ -744,7 +839,7 @@
             // 
             this.pbxProducto.Location = new System.Drawing.Point(852, 19);
             this.pbxProducto.Name = "pbxProducto";
-            this.pbxProducto.Size = new System.Drawing.Size(219, 245);
+            this.pbxProducto.Size = new System.Drawing.Size(219, 265);
             this.pbxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxProducto.TabIndex = 40;
             this.pbxProducto.TabStop = false;
@@ -874,17 +969,17 @@
             // 
             // FrmProducts
             // 
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 552);
+            this.CancelButton = this.btnCancelar;
+            this.ClientSize = new System.Drawing.Size(1105, 623);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.productoDataGridView);
             this.Controls.Add(this.productoBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmProducts";
-            this.Text = "FrmProducts";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.FrmProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
@@ -958,8 +1053,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.GroupBox gbxBarras;
         private System.Windows.Forms.DataGridView BarraDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn barraDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox gbxBodegas;
         private System.Windows.Forms.DataGridView BodegasDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDBodegaDataGridViewTextBoxColumn;
@@ -977,5 +1070,13 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barraDataGridViewTextBoxColumn;
     }
 }

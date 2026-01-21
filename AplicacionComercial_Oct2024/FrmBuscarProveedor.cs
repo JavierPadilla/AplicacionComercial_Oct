@@ -38,7 +38,7 @@ namespace AplicacionComercial_Oct2024
             if (e.Control && e.KeyCode == Keys.S)
             {
                 // CTRL + S
-                btnAceptar_Click(sender, e);
+                fillByToolStripButton_Click(sender, e);
             }
         }
 
@@ -109,6 +109,24 @@ namespace AplicacionComercial_Oct2024
             }
         }
 
+        private void nombreTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
 
+        private void nombresContactoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void documentoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void apellidosContactoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
     }
 }

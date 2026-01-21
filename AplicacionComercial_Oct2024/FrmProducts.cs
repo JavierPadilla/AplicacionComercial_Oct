@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CADAplicacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace AplicacionComercial_Oct2024
 {
     public partial class FrmProducts : Form
     {
+        private bool esNuevo = false;
+
         public FrmProducts()
         {
             InitializeComponent();
@@ -163,6 +166,13 @@ namespace AplicacionComercial_Oct2024
             bindingNavigatorPositionItem.ReadOnly = false;
             bindingNavigatorCancel.Enabled = true;
             bindingNavigatorSaveItem.Enabled = true;
+            btnModificar.Enabled = false;
+            btnNuevo.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnBuscar.Enabled=false;
+            btnAceptar.Enabled = true;
+            btnCancelar.Enabled = true;
+            productoDataGridView.Enabled = false;
             //TextBox
             descripcionTextBox.ReadOnly = false;
             iDDepartamentoComboBox.Enabled = true;
@@ -172,11 +182,21 @@ namespace AplicacionComercial_Oct2024
             BtnSeleccionar.Enabled = true;
             iDMedidaComboBox.Enabled = true;
             medidaTextBox.ReadOnly = false;
-            btnAgregarBarra.Enabled = true;
-            btnEliminarBarra.Enabled = true;
-            btnAgregarBodega.Enabled = true;
             imagenTextBox.ReadOnly = false;
-            descripcionTextBox.Focus();
+            if (esNuevo ==false)
+            {
+                btnAgregarBarra.Enabled = true;
+                btnEliminarBarra.Enabled = true;
+                btnAgregarBodega.Enabled = true;
+
+            }
+            else
+            {
+                btnAgregarBarra.Enabled = false;
+                btnEliminarBarra.Enabled = false;
+                btnAgregarBodega.Enabled = false;
+            }
+                descripcionTextBox.Focus();
         }
         private void DeshabilitarCampos()
         {
@@ -192,6 +212,13 @@ namespace AplicacionComercial_Oct2024
             bindingNavigatorPositionItem.ReadOnly = true;
             bindingNavigatorCancel.Enabled = false;
             bindingNavigatorSaveItem.Enabled = false;
+            btnModificar.Enabled = true;
+            btnNuevo.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnBuscar.Enabled = true;
+            btnAceptar.Enabled = false;
+            btnCancelar.Enabled = false;
+            productoDataGridView.Enabled = true;
             //TextBox
             descripcionTextBox.ReadOnly = true;
             iDDepartamentoComboBox.Enabled = false;
@@ -210,6 +237,7 @@ namespace AplicacionComercial_Oct2024
 
         private void bindingNavigatorModifyItem_Click(object sender, EventArgs e)
         {
+            esNuevo = false;
             HabilitarCampos();
         }
 
@@ -222,6 +250,7 @@ namespace AplicacionComercial_Oct2024
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            esNuevo = true;
             HabilitarCampos();
             productoBindingSource.AddNew();
 
@@ -289,9 +318,84 @@ namespace AplicacionComercial_Oct2024
 
         }
 
-        private void BarraDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            productoBindingNavigatorSaveItem_Click(sender,e);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorCancel_Click(sender, e);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            HabilitarCampos();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            HabilitarCampos();
+            productoBindingSource.AddNew();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorDeleteItem_Click(sender,e);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorShearchItem_Click(sender, e);
+        }
+
+        private void bindingNavigatorShearchItem_Click(object sender, EventArgs e)
+        {
+            FrmBuscarProducto buscarProducto= new FrmBuscarProducto();
+            buscarProducto.ShowDialog();
+            if (buscarProducto.IdProducto == 0)
+            {
+                return;
+            }
+            int posicion = productoBindingSource.Find("IDProducto", buscarProducto.IdProducto);
+            productoBindingSource.Position= posicion;
+
+        }
+
+        private void btnAgregarBarra_Click(object sender, EventArgs e)
+        {
+            FrmAgregarBarra agregarBarra= new FrmAgregarBarra();
+            agregarBarra.ShowDialog();
+            if (agregarBarra.Barra == 0)
+            {
+                return;
+            }
+            else
+            {
+                int idProducto = int.Parse(iDProductoTextBox.Text);
+                long nuevaBarra = agregarBarra.Barra;
+                CADBarra.InsertarBarra(idProducto, nuevaBarra);
+                MostrarBarraBodega();
+            }
+        }
+
+        private void btnEliminarBarra_Click(object sender, EventArgs e)
+        {
+            DialogResult rta = MessageBox.Show("Esta seguro de querer borrar esta BARRA del producto ? ", "Confirmación",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (rta == DialogResult.No) return;
+            long barra = (long)BarraDataGridView.Rows[barraBindingSource.Position].Cells[1].Value;
+            CADBarra.DeleteBarra(barra);
+            this.tableAdapterManager.UpdateAll(dsAplicacionComercialxsd);
+            MostrarBarraBodega();
+        }
+
+        private void btnAgregarBodega_Click(object sender, EventArgs e)
+        {
+            FrmParaBobega parametrosBodega= new FrmParaBobega();
+            parametrosBodega.IdProducto = int.Parse(iDProductoTextBox.Text);
+            parametrosBodega.ShowDialog();
         }
     }
 }

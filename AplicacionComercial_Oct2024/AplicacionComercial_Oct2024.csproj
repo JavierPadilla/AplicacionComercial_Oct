@@ -66,6 +66,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsAplicacionComercialxsd.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmAgregarBarra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarBarra.Designer.cs">
+      <DependentUpon>FrmAgregarBarra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarProducto.Designer.cs">
+      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBuscarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,18 @@
     <Compile Include="FrmPantallaPrincipal.Designer.cs">
       <DependentUpon>FrmPantallaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmParaBobega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParaBobega.Designer.cs">
+      <DependentUpon>FrmParaBobega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParametrosBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametrosBodega.Designer.cs">
+      <DependentUpon>FrmParametrosBodega.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +140,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RegexUtilities.cs" />
+    <EmbeddedResource Include="FrmAgregarBarra.resx">
+      <DependentUpon>FrmAgregarBarra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarProducto.resx">
+      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarProveedor.resx">
       <DependentUpon>FrmBuscarProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPantallaPrincipal.resx">
       <DependentUpon>FrmPantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParaBobega.resx">
+      <DependentUpon>FrmParaBobega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParametrosBodega.resx">
+      <DependentUpon>FrmParametrosBodega.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProducts.resx">
       <DependentUpon>FrmProducts.cs</DependentUpon>

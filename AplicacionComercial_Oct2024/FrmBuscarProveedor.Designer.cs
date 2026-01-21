@@ -34,17 +34,6 @@
             System.Windows.Forms.Label documentoLabel;
             System.Windows.Forms.Label nombreLabel;
             this.proveedorDataGridView = new System.Windows.Forms.DataGridView();
-            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDTipoDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombresContactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosContactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsAplicacionComercialxsd = new AplicacionComercial_Oct2024.DsAplicacionComercialxsd();
             this.proveedorTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.ProveedorTableAdapter();
@@ -56,6 +45,17 @@
             this.nombresContactoTextBox = new System.Windows.Forms.TextBox();
             this.documentoTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDTipoDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresContactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosContactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             apellidosContactoLabel = new System.Windows.Forms.Label();
             nombresContactoLabel = new System.Windows.Forms.Label();
             documentoLabel = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             // apellidosContactoLabel
             // 
             apellidosContactoLabel.AutoSize = true;
-            apellidosContactoLabel.Location = new System.Drawing.Point(10, 112);
+            apellidosContactoLabel.Location = new System.Drawing.Point(294, 38);
             apellidosContactoLabel.Name = "apellidosContactoLabel";
             apellidosContactoLabel.Size = new System.Drawing.Size(98, 13);
             apellidosContactoLabel.TabIndex = 26;
@@ -77,7 +77,7 @@
             // nombresContactoLabel
             // 
             nombresContactoLabel.AutoSize = true;
-            nombresContactoLabel.Location = new System.Drawing.Point(10, 83);
+            nombresContactoLabel.Location = new System.Drawing.Point(10, 35);
             nombresContactoLabel.Name = "nombresContactoLabel";
             nombresContactoLabel.Size = new System.Drawing.Size(98, 13);
             nombresContactoLabel.TabIndex = 24;
@@ -86,7 +86,7 @@
             // documentoLabel
             // 
             documentoLabel.AutoSize = true;
-            documentoLabel.Location = new System.Drawing.Point(43, 50);
+            documentoLabel.Location = new System.Drawing.Point(326, 12);
             documentoLabel.Name = "documentoLabel";
             documentoLabel.Size = new System.Drawing.Size(65, 13);
             documentoLabel.TabIndex = 22;
@@ -95,7 +95,7 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(61, 15);
+            nombreLabel.Location = new System.Drawing.Point(57, 9);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 20;
@@ -123,11 +123,106 @@
             this.correoDataGridViewTextBoxColumn,
             this.notasDataGridViewTextBoxColumn});
             this.proveedorDataGridView.DataSource = this.proveedorBindingSource;
-            this.proveedorDataGridView.Location = new System.Drawing.Point(0, 147);
+            this.proveedorDataGridView.Location = new System.Drawing.Point(0, 118);
             this.proveedorDataGridView.Name = "proveedorDataGridView";
             this.proveedorDataGridView.ReadOnly = true;
-            this.proveedorDataGridView.Size = new System.Drawing.Size(607, 150);
+            this.proveedorDataGridView.Size = new System.Drawing.Size(744, 193);
             this.proveedorDataGridView.TabIndex = 0;
+            // 
+            // proveedorBindingSource
+            // 
+            this.proveedorBindingSource.DataMember = "Proveedor";
+            this.proveedorBindingSource.DataSource = this.dsAplicacionComercialxsd;
+            // 
+            // dsAplicacionComercialxsd
+            // 
+            this.dsAplicacionComercialxsd.DataSetName = "DsAplicacionComercialxsd";
+            this.dsAplicacionComercialxsd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proveedorTableAdapter
+            // 
+            this.proveedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(642, 61);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(78, 51);
+            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Aceptar2;
+            this.btnAceptar.Location = new System.Drawing.Point(558, 61);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(78, 51);
+            this.btnAceptar.TabIndex = 36;
+            this.btnAceptar.Text = "&Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Buscar;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscar.Location = new System.Drawing.Point(390, 61);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(78, 51);
+            this.btnBuscar.TabIndex = 35;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(474, 61);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(78, 51);
+            this.btnLimpiar.TabIndex = 34;
+            this.btnLimpiar.Text = "&Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // apellidosContactoTextBox
+            // 
+            this.apellidosContactoTextBox.Location = new System.Drawing.Point(398, 35);
+            this.apellidosContactoTextBox.Name = "apellidosContactoTextBox";
+            this.apellidosContactoTextBox.Size = new System.Drawing.Size(161, 20);
+            this.apellidosContactoTextBox.TabIndex = 27;
+            this.apellidosContactoTextBox.TextChanged += new System.EventHandler(this.apellidosContactoTextBox_TextChanged);
+            // 
+            // nombresContactoTextBox
+            // 
+            this.nombresContactoTextBox.Location = new System.Drawing.Point(110, 32);
+            this.nombresContactoTextBox.Name = "nombresContactoTextBox";
+            this.nombresContactoTextBox.Size = new System.Drawing.Size(161, 20);
+            this.nombresContactoTextBox.TabIndex = 25;
+            this.nombresContactoTextBox.TextChanged += new System.EventHandler(this.nombresContactoTextBox_TextChanged);
+            // 
+            // documentoTextBox
+            // 
+            this.documentoTextBox.Location = new System.Drawing.Point(398, 9);
+            this.documentoTextBox.Name = "documentoTextBox";
+            this.documentoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.documentoTextBox.TabIndex = 23;
+            this.documentoTextBox.TextChanged += new System.EventHandler(this.documentoTextBox_TextChanged);
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.Location = new System.Drawing.Point(110, 6);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(161, 20);
+            this.nombreTextBox.TabIndex = 21;
+            this.nombreTextBox.TextChanged += new System.EventHandler(this.nombreTextBox_TextChanged);
             // 
             // iDProveedorDataGridViewTextBoxColumn
             // 
@@ -135,6 +230,7 @@
             this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "IDProveedor";
             this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
             this.iDProveedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDProveedorDataGridViewTextBoxColumn.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -191,6 +287,7 @@
             this.telefono2DataGridViewTextBoxColumn.HeaderText = "Telefono2";
             this.telefono2DataGridViewTextBoxColumn.Name = "telefono2DataGridViewTextBoxColumn";
             this.telefono2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.telefono2DataGridViewTextBoxColumn.Visible = false;
             // 
             // correoDataGridViewTextBoxColumn
             // 
@@ -198,6 +295,7 @@
             this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
             this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
             this.correoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.correoDataGridViewTextBoxColumn.Visible = false;
             // 
             // notasDataGridViewTextBoxColumn
             // 
@@ -205,100 +303,15 @@
             this.notasDataGridViewTextBoxColumn.HeaderText = "Notas";
             this.notasDataGridViewTextBoxColumn.Name = "notasDataGridViewTextBoxColumn";
             this.notasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // proveedorBindingSource
-            // 
-            this.proveedorBindingSource.DataMember = "Proveedor";
-            this.proveedorBindingSource.DataSource = this.dsAplicacionComercialxsd;
-            // 
-            // dsAplicacionComercialxsd
-            // 
-            this.dsAplicacionComercialxsd.DataSetName = "DsAplicacionComercialxsd";
-            this.dsAplicacionComercialxsd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proveedorTableAdapter
-            // 
-            this.proveedorTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(478, 80);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(78, 51);
-            this.btnCancelar.TabIndex = 37;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(342, 83);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(78, 51);
-            this.btnAceptar.TabIndex = 36;
-            this.btnAceptar.Text = "&Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnBuscar
-            // 
-//            this.btnBuscar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Buscar;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(342, 16);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(78, 51);
-            this.btnBuscar.TabIndex = 35;
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(478, 15);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(78, 51);
-            this.btnLimpiar.TabIndex = 34;
-            this.btnLimpiar.Text = "&Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // apellidosContactoTextBox
-            // 
-            this.apellidosContactoTextBox.Location = new System.Drawing.Point(114, 109);
-            this.apellidosContactoTextBox.Name = "apellidosContactoTextBox";
-            this.apellidosContactoTextBox.Size = new System.Drawing.Size(161, 20);
-            this.apellidosContactoTextBox.TabIndex = 27;
-            // 
-            // nombresContactoTextBox
-            // 
-            this.nombresContactoTextBox.Location = new System.Drawing.Point(114, 80);
-            this.nombresContactoTextBox.Name = "nombresContactoTextBox";
-            this.nombresContactoTextBox.Size = new System.Drawing.Size(161, 20);
-            this.nombresContactoTextBox.TabIndex = 25;
-            // 
-            // documentoTextBox
-            // 
-            this.documentoTextBox.Location = new System.Drawing.Point(114, 47);
-            this.documentoTextBox.Name = "documentoTextBox";
-            this.documentoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.documentoTextBox.TabIndex = 23;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.Location = new System.Drawing.Point(114, 12);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(161, 20);
-            this.nombreTextBox.TabIndex = 21;
+            this.notasDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmBuscarProveedor
             // 
-            this.AcceptButton = this.btnBuscar;
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(618, 315);
+            this.ClientSize = new System.Drawing.Size(760, 329);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnBuscar);
@@ -332,6 +345,14 @@
         private DsAplicacionComercialxsd dsAplicacionComercialxsd;
         private System.Windows.Forms.BindingSource proveedorBindingSource;
         private DsAplicacionComercialxsdTableAdapters.ProveedorTableAdapter proveedorTableAdapter;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.TextBox apellidosContactoTextBox;
+        private System.Windows.Forms.TextBox nombresContactoTextBox;
+        private System.Windows.Forms.TextBox documentoTextBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDProveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDTipoDocumentoDataGridViewTextBoxColumn;
@@ -343,13 +364,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.TextBox apellidosContactoTextBox;
-        private System.Windows.Forms.TextBox nombresContactoTextBox;
-        private System.Windows.Forms.TextBox documentoTextBox;
-        private System.Windows.Forms.TextBox nombreTextBox;
     }
 }
