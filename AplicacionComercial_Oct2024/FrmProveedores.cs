@@ -212,7 +212,9 @@ namespace AplicacionComercial_Oct2024
 
         }
 
+        private void proveedorBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
