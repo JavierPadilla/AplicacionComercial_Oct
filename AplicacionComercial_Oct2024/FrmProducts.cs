@@ -394,7 +394,7 @@ namespace AplicacionComercial_Oct2024
         private void btnAgregarBodega_Click(object sender, EventArgs e)
         {
             FrmParaBobega parametrosBodega= new FrmParaBobega();
-            parametrosBodega.IdProducto = int.Parse(iDProductoTextBox.Text);
+            //parametrosBodega.IdProducto = int.Parse(iDProductoTextBox.Text);
             parametrosBodega.ShowDialog();
         }
     }
