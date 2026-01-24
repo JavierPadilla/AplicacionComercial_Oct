@@ -196,7 +196,7 @@
             // 
             this.btnAceptar.Enabled = false;
             this.btnAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Aceptar2;
-            this.btnAceptar.Location = new System.Drawing.Point(264, 125);
+            this.btnAceptar.Location = new System.Drawing.Point(12, 125);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(102, 52);
             this.btnAceptar.TabIndex = 49;
