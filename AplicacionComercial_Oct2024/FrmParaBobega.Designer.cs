@@ -175,7 +175,7 @@
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(376, 125);
+            this.btnCancelar.Location = new System.Drawing.Point(355, 125);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(102, 52);
             this.btnCancelar.TabIndex = 50;
@@ -187,7 +187,7 @@
             // 
             this.btnAceptar.Enabled = false;
             this.btnAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Aceptar2;
-            this.btnAceptar.Location = new System.Drawing.Point(12, 125);
+            this.btnAceptar.Location = new System.Drawing.Point(39, 125);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(102, 52);
             this.btnAceptar.TabIndex = 49;
