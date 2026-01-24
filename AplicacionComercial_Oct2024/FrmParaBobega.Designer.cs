@@ -48,10 +48,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsAplicacionComercialxsdBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bodegaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bodegaProductoTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.BodegaProductoTableAdapter();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsd)).BeginInit();
@@ -59,9 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsdBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -209,11 +209,16 @@
             this.comboBox1.DataSource = this.usersBindingSource;
             this.comboBox1.DisplayMember = "UserName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 134);
+            this.comboBox1.Location = new System.Drawing.Point(173, 135);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 21);
+            this.comboBox1.Size = new System.Drawing.Size(156, 21);
             this.comboBox1.TabIndex = 51;
             this.comboBox1.ValueMember = "UserId";
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.dsAplicacionComercialxsd;
             // 
             // dsAplicacionComercialxsdBindingSource
             // 
@@ -228,11 +233,6 @@
             // bodegaProductoTableAdapter
             // 
             this.bodegaProductoTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.dsAplicacionComercialxsd;
             // 
             // usersTableAdapter
             // 
@@ -270,9 +270,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsdBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
