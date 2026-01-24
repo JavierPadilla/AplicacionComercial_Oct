@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 168);
+            this.ClientSize = new System.Drawing.Size(623, 200);
             this.Controls.Add(iDProductoLabel);
             this.Controls.Add(this.iDProductoTextBox);
             this.Controls.Add(this.bodegacomboBox);
