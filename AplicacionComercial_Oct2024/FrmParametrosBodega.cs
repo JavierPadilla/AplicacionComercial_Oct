@@ -42,7 +42,7 @@ namespace AplicacionComercial_Oct2024
             this.bodegaTableAdapter.Fill(this.dsAplicacionComercialxsd.Bodega);
            bodegacomboBox.SelectedIndex = -1;
             // TODO: esta línea de código carga datos en la tabla 'dsAplicacionComercialxsd.BodegaProducto' Puede moverla o quitarla según sea necesario.
-            this.bodegaProductoTableAdapter.Fill(this.dsAplicacionComercialxsd.BodegaProducto,_idproducto);
+          //  this.bodegaProductoTableAdapter.Fill(this.dsAplicacionComercialxsd.BodegaProducto,_idproducto);
             //this.bodegaProductoTableAdapter.BuscarBodegaProductoByIDProducto(_idproducto);
 
         }
