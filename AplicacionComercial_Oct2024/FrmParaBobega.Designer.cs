@@ -40,14 +40,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.StockTextBox = new System.Windows.Forms.TextBox();
+            this.MinimoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MaximoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MinimoOrdenarNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DiasReposicionNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsAplicacionComercialxsdBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bodegaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -55,10 +54,10 @@
             this.usersTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaximoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimoOrdenarNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiasReposicionNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsdBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).BeginInit();
@@ -83,6 +82,7 @@
             this.BodegaComboBox.Size = new System.Drawing.Size(143, 21);
             this.BodegaComboBox.TabIndex = 1;
             this.BodegaComboBox.ValueMember = "IDBodega";
+            this.BodegaComboBox.SelectedIndexChanged += new System.EventHandler(this.BodegaComboBox_SelectedIndexChanged);
             // 
             // bodegaBindingSource
             // 
@@ -143,50 +143,50 @@
             this.label6.TabIndex = 6;
             this.label6.Text = " Cantidad Minima a Ordenar :  ";
             // 
-            // textBox1
+            // StockTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(318, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(84, 20);
-            this.textBox1.TabIndex = 7;
+            this.StockTextBox.Location = new System.Drawing.Point(318, 8);
+            this.StockTextBox.Name = "StockTextBox";
+            this.StockTextBox.ReadOnly = true;
+            this.StockTextBox.Size = new System.Drawing.Size(84, 20);
+            this.StockTextBox.TabIndex = 7;
             // 
-            // numericUpDown1
+            // MinimoNumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(103, 56);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 8;
+            this.MinimoNumericUpDown.Location = new System.Drawing.Point(103, 56);
+            this.MinimoNumericUpDown.Name = "MinimoNumericUpDown";
+            this.MinimoNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.MinimoNumericUpDown.TabIndex = 8;
             // 
-            // numericUpDown2
+            // MaximoNumericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(376, 56);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 9;
+            this.MaximoNumericUpDown.Location = new System.Drawing.Point(376, 56);
+            this.MaximoNumericUpDown.Name = "MaximoNumericUpDown";
+            this.MaximoNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.MaximoNumericUpDown.TabIndex = 9;
             // 
-            // numericUpDown3
+            // MinimoOrdenarNumericUpDown
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(376, 93);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 10;
+            this.MinimoOrdenarNumericUpDown.Location = new System.Drawing.Point(376, 93);
+            this.MinimoOrdenarNumericUpDown.Name = "MinimoOrdenarNumericUpDown";
+            this.MinimoOrdenarNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.MinimoOrdenarNumericUpDown.TabIndex = 10;
             // 
-            // numericUpDown4
+            // DiasReposicionNumericUpDown
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(103, 90);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown4.TabIndex = 11;
+            this.DiasReposicionNumericUpDown.Location = new System.Drawing.Point(103, 90);
+            this.DiasReposicionNumericUpDown.Name = "DiasReposicionNumericUpDown";
+            this.DiasReposicionNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.DiasReposicionNumericUpDown.TabIndex = 11;
             // 
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(355, 125);
+            this.btnCancelar.Location = new System.Drawing.Point(539, 78);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(102, 52);
+            this.btnCancelar.Size = new System.Drawing.Size(102, 62);
             this.btnCancelar.TabIndex = 50;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -195,25 +195,15 @@
             // btnAceptar
             // 
             this.btnAceptar.Enabled = false;
-            this.btnAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Aceptar2;
-            this.btnAceptar.Location = new System.Drawing.Point(39, 125);
+            this.btnAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Guardar;
+            this.btnAceptar.Location = new System.Drawing.Point(539, 8);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(102, 52);
+            this.btnAceptar.Size = new System.Drawing.Size(102, 64);
             this.btnAceptar.TabIndex = 49;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.usersBindingSource;
-            this.comboBox1.DisplayMember = "UserName";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(173, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
-            this.comboBox1.TabIndex = 51;
-            this.comboBox1.ValueMember = "UserId";
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // usersBindingSource
             // 
@@ -242,15 +232,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 189);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(649, 145);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DiasReposicionNumericUpDown);
+            this.Controls.Add(this.MinimoOrdenarNumericUpDown);
+            this.Controls.Add(this.MaximoNumericUpDown);
+            this.Controls.Add(this.MinimoNumericUpDown);
+            this.Controls.Add(this.StockTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -266,10 +255,10 @@
             this.Load += new System.EventHandler(this.FrmParaBabega_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaximoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimoOrdenarNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiasReposicionNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsdBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).EndInit();
@@ -290,14 +279,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.TextBox StockTextBox;
+        private System.Windows.Forms.NumericUpDown MinimoNumericUpDown;
+        private System.Windows.Forms.NumericUpDown MaximoNumericUpDown;
+        private System.Windows.Forms.NumericUpDown MinimoOrdenarNumericUpDown;
+        private System.Windows.Forms.NumericUpDown DiasReposicionNumericUpDown;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource bodegaProductoBindingSource;
         private System.Windows.Forms.BindingSource dsAplicacionComercialxsdBindingSource;
         private DsAplicacionComercialxsdTableAdapters.BodegaProductoTableAdapter bodegaProductoTableAdapter;

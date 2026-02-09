@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CADAplicacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,8 @@ namespace AplicacionComercial_Oct2024
 {
     public partial class FrmParaBobega : Form
     {
-        private int IdProducto;
-        public int IdProducto1 { get => IdProducto; set => IdProducto = value; }
+        private int _IdProducto;
+        public int IdProducto { get => _IdProducto; set => _IdProducto = value; }
         public FrmParaBobega()
         {
             InitializeComponent();
@@ -23,11 +24,46 @@ namespace AplicacionComercial_Oct2024
 
         private void FrmParaBabega_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dsAplicacionComercialxsd.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.dsAplicacionComercialxsd.Users);
-            // TODO: esta línea de código carga datos en la tabla 'dsAplicacionComercialxsd.Bodega' Puede moverla o quitarla según sea necesario.
+           
+
             this.bodegaTableAdapter.Fill(this.dsAplicacionComercialxsd.Bodega);
 
+        }
+
+        private void BodegaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (BodegaComboBox.SelectedIndex == -1) return;
+
+
+                CADBodegaProducto miBodegaProducto =
+                    CADBodegaProducto.GetBodegaProductoByIDBodegaAndIDProducto(
+                        (int)BodegaComboBox.SelectedValue, IdProducto);
+                if (miBodegaProducto != null)
+                {
+                  StockTextBox.Text = miBodegaProducto.Stock.ToString();
+                    MinimoNumericUpDown.Value = miBodegaProducto.Minimo;
+                    MaximoNumericUpDown.Value = miBodegaProducto.Maximo;
+                    DiasReposicionNumericUpDown.Value = miBodegaProducto.DiasReposicion;
+                    MinimoOrdenarNumericUpDown.Value = miBodegaProducto.MinimoOrdenar;
+                }
+                else
+                {
+                    StockTextBox.Text = "0";
+                    MinimoNumericUpDown.Value = 0;
+                    MaximoNumericUpDown.Value = 0;
+                    DiasReposicionNumericUpDown.Value = 0;
+                    MinimoOrdenarNumericUpDown.Value = 0;
+                }
+
+                return;
+            
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            CADBodegaProducto.UpdateBodegaProducto((int)BodegaComboBox.SelectedValue, IdProducto, (double)MinimoNumericUpDown.Value, (double)MaximoNumericUpDown.Value, (int)DiasReposicionNumericUpDown.Value, (double)MinimoOrdenarNumericUpDown.Value);
+             MessageBox.Show("Datos guardados correctamente");
+             this.Close();
         }
     }
 }

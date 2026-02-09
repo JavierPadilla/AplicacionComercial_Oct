@@ -123,6 +123,8 @@ namespace AplicacionComercial_Oct2024
 
         private void FrmProducts_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dsAplicacionComercialxsd.BodegaProducto' Puede moverla o quitarla según sea necesario.
+            this.bodegaProductoTableAdapter.Fill(this.dsAplicacionComercialxsd.BodegaProducto);
             // TODO: esta línea de código carga datos en la tabla 'dsAplicacionComercialxsd.Medida' Puede moverla o quitarla según sea necesario.
             this.medidaTableAdapter.Fill(this.dsAplicacionComercialxsd.Medida);
             // TODO: esta línea de código carga datos en la tabla 'dsAplicacionComercialxsd.IVA' Puede moverla o quitarla según sea necesario.
@@ -394,8 +396,11 @@ namespace AplicacionComercial_Oct2024
         private void btnAgregarBodega_Click(object sender, EventArgs e)
         {
             FrmParaBobega parametrosBodega= new FrmParaBobega();
-            //parametrosBodega.IdProducto = int.Parse(iDProductoTextBox.Text);
+            parametrosBodega.IdProducto = int.Parse(iDProductoTextBox.Text);
             parametrosBodega.ShowDialog();
+            MostrarBarraBodega();
         }
+
+
     }
 }
