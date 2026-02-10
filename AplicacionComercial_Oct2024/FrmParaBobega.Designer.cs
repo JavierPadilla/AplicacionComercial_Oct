@@ -52,6 +52,7 @@
             this.bodegaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bodegaProductoTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.BodegaProductoTableAdapter();
             this.usersTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.UsersTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimoNumericUpDown)).BeginInit();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsdBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -182,7 +184,6 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.Location = new System.Drawing.Point(539, 78);
             this.btnCancelar.Name = "btnCancelar";
@@ -191,10 +192,10 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Enabled = false;
             this.btnAceptar.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Guardar;
             this.btnAceptar.Location = new System.Drawing.Point(539, 8);
             this.btnAceptar.Name = "btnAceptar";
@@ -227,6 +228,10 @@
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmParaBobega
             // 
@@ -262,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsdBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +297,6 @@
         private DsAplicacionComercialxsdTableAdapters.BodegaProductoTableAdapter bodegaProductoTableAdapter;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private DsAplicacionComercialxsdTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

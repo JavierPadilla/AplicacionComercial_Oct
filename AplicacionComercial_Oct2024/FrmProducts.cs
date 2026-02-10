@@ -264,8 +264,8 @@ namespace AplicacionComercial_Oct2024
             try
             {
                 int.TryParse(iDProductoTextBox.Text, out int idProducto);
-               // this.barraTableAdapter.FillByBarras(this.dsAplicacionComercialxsd.Barra,idProducto );
-                //this.bodegaTableAdapter.FillByBodega(this.dsAplicacionComercialxsd.Bodega,idProducto);
+               this.barraTableAdapter.FillByBarras(this.dsAplicacionComercialxsd.Barra,idProducto );
+               this.bodegaProductoTableAdapter.FillByBodega(this.dsAplicacionComercialxsd.BodegaProducto,idProducto);
 
             }
             catch (System.Exception ex)

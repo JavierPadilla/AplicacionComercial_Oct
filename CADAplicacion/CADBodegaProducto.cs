@@ -49,7 +49,7 @@ namespace CADAplicacion
             catch (Exception)
             {
                 adaptador.UpdateBodegaProducto(Minimo, Maximo, DiasReposicion, CantidadMinima, IDBodega, IDProducto);
-                throw;
+                
             }
             
         }

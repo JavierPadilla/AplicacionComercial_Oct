@@ -61,5 +61,13 @@ namespace AplicacionComercial_Oct2024
         {
             productosToolStripMenuItem_Click(sender,e);
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frmUsuarios = new FrmUsuarios();
+            frmUsuarios.MdiParent = this;
+            frmUsuarios.Show();
+
+        }
     }
 }
