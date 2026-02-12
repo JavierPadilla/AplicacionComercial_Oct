@@ -44,9 +44,7 @@
             this.tableAdapterManager = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.TableAdapterManager();
             this.rolTableAdapter = new AplicacionComercial_Oct2024.DsAplicacionComercialxsdTableAdapters.RolTableAdapter();
             this.usuarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -56,6 +54,8 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.TsbEditar = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.usuarioBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.TsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.TsbBuscar = new System.Windows.Forms.ToolStripButton();
@@ -76,6 +76,7 @@
             this.ConfirmacionTextBox = new System.Windows.Forms.TextBox();
             this.iDRolComboBox = new System.Windows.Forms.ComboBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             iDUsuarioLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
             apellidosLabel = new System.Windows.Forms.Label();
@@ -90,6 +91,7 @@
             this.usuarioBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // iDUsuarioLabel
@@ -98,7 +100,7 @@
             iDUsuarioLabel.Location = new System.Drawing.Point(87, 46);
             iDUsuarioLabel.Name = "iDUsuarioLabel";
             iDUsuarioLabel.Size = new System.Drawing.Size(57, 13);
-            iDUsuarioLabel.TabIndex = 2;
+            iDUsuarioLabel.TabIndex = 1;
             iDUsuarioLabel.Text = "IDUsuario:";
             // 
             // nombresLabel
@@ -107,7 +109,7 @@
             nombresLabel.Location = new System.Drawing.Point(91, 77);
             nombresLabel.Name = "nombresLabel";
             nombresLabel.Size = new System.Drawing.Size(52, 13);
-            nombresLabel.TabIndex = 4;
+            nombresLabel.TabIndex = 5;
             nombresLabel.Text = "Nombres:";
             // 
             // apellidosLabel
@@ -116,7 +118,7 @@
             apellidosLabel.Location = new System.Drawing.Point(365, 76);
             apellidosLabel.Name = "apellidosLabel";
             apellidosLabel.Size = new System.Drawing.Size(52, 13);
-            apellidosLabel.TabIndex = 6;
+            apellidosLabel.TabIndex = 7;
             apellidosLabel.Text = "Apellidos:";
             // 
             // claveLabel
@@ -125,7 +127,7 @@
             claveLabel.Location = new System.Drawing.Point(104, 108);
             claveLabel.Name = "claveLabel";
             claveLabel.Size = new System.Drawing.Size(37, 13);
-            claveLabel.TabIndex = 8;
+            claveLabel.TabIndex = 9;
             claveLabel.Text = "Clave:";
             // 
             // label1
@@ -134,7 +136,7 @@
             label1.Location = new System.Drawing.Point(351, 108);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(74, 13);
-            label1.TabIndex = 10;
+            label1.TabIndex = 11;
             label1.Text = "Confirmacion :";
             // 
             // fechaModificacionClaveLabel
@@ -143,7 +145,7 @@
             fechaModificacionClaveLabel.Location = new System.Drawing.Point(8, 139);
             fechaModificacionClaveLabel.Name = "fechaModificacionClaveLabel";
             fechaModificacionClaveLabel.Size = new System.Drawing.Size(133, 13);
-            fechaModificacionClaveLabel.TabIndex = 11;
+            fechaModificacionClaveLabel.TabIndex = 13;
             fechaModificacionClaveLabel.Text = "Fecha Modificacion Clave:";
             // 
             // iDRolLabel
@@ -152,7 +154,7 @@
             iDRolLabel.Location = new System.Drawing.Point(380, 49);
             iDRolLabel.Name = "iDRolLabel";
             iDRolLabel.Size = new System.Drawing.Size(37, 13);
-            iDRolLabel.TabIndex = 14;
+            iDRolLabel.TabIndex = 3;
             iDRolLabel.Text = "IDRol:";
             // 
             // correoLabel
@@ -161,7 +163,7 @@
             correoLabel.Location = new System.Drawing.Point(376, 142);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(41, 13);
-            correoLabel.TabIndex = 16;
+            correoLabel.TabIndex = 15;
             correoLabel.Text = "Correo:";
             // 
             // dsAplicacionComercialxsd
@@ -237,10 +239,10 @@
             // 
             // usuarioBindingNavigator
             // 
-            this.usuarioBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.usuarioBindingNavigator.AddNewItem = null;
             this.usuarioBindingNavigator.BindingSource = this.usuarioBindingSource;
             this.usuarioBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.usuarioBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.usuarioBindingNavigator.DeleteItem = null;
             this.usuarioBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -268,31 +270,12 @@
             this.usuarioBindingNavigator.TabIndex = 0;
             this.usuarioBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Nuevo;
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Borrar2;
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -365,6 +348,26 @@
             this.TsbEditar.Text = "Editar";
             this.TsbEditar.Click += new System.EventHandler(this.TsbEditar_Click);
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Nuevo;
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = global::AplicacionComercial_Oct2024.Properties.Resources.Borrar2;
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
             // usuarioBindingNavigatorSaveItem
             // 
             this.usuarioBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -382,6 +385,7 @@
             this.TsbCancelar.Name = "TsbCancelar";
             this.TsbCancelar.Size = new System.Drawing.Size(23, 22);
             this.TsbCancelar.Text = "Cancelar Cambios";
+            this.TsbCancelar.Click += new System.EventHandler(this.TsbCancelar_Click);
             // 
             // TsbBuscar
             // 
@@ -391,6 +395,7 @@
             this.TsbBuscar.Name = "TsbBuscar";
             this.TsbBuscar.Size = new System.Drawing.Size(23, 22);
             this.TsbBuscar.Text = "Buscar Usuario";
+            this.TsbBuscar.Click += new System.EventHandler(this.TsbBuscar_Click);
             // 
             // usuarioDataGridView
             // 
@@ -415,7 +420,7 @@
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
             this.usuarioDataGridView.Size = new System.Drawing.Size(680, 357);
-            this.usuarioDataGridView.TabIndex = 1;
+            this.usuarioDataGridView.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -484,7 +489,7 @@
             this.iDUsuarioTextBox.Name = "iDUsuarioTextBox";
             this.iDUsuarioTextBox.ReadOnly = true;
             this.iDUsuarioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.iDUsuarioTextBox.TabIndex = 3;
+            this.iDUsuarioTextBox.TabIndex = 2;
             // 
             // nombresTextBox
             // 
@@ -493,7 +498,7 @@
             this.nombresTextBox.Name = "nombresTextBox";
             this.nombresTextBox.ReadOnly = true;
             this.nombresTextBox.Size = new System.Drawing.Size(187, 20);
-            this.nombresTextBox.TabIndex = 5;
+            this.nombresTextBox.TabIndex = 6;
             // 
             // apellidosTextBox
             // 
@@ -502,7 +507,7 @@
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.ReadOnly = true;
             this.apellidosTextBox.Size = new System.Drawing.Size(195, 20);
-            this.apellidosTextBox.TabIndex = 7;
+            this.apellidosTextBox.TabIndex = 8;
             // 
             // claveTextBox
             // 
@@ -512,7 +517,7 @@
             this.claveTextBox.PasswordChar = '*';
             this.claveTextBox.ReadOnly = true;
             this.claveTextBox.Size = new System.Drawing.Size(189, 20);
-            this.claveTextBox.TabIndex = 9;
+            this.claveTextBox.TabIndex = 10;
             // 
             // fechaModificacionClaveDateTimePicker
             // 
@@ -520,7 +525,7 @@
             this.fechaModificacionClaveDateTimePicker.Location = new System.Drawing.Point(147, 135);
             this.fechaModificacionClaveDateTimePicker.Name = "fechaModificacionClaveDateTimePicker";
             this.fechaModificacionClaveDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fechaModificacionClaveDateTimePicker.TabIndex = 12;
+            this.fechaModificacionClaveDateTimePicker.TabIndex = 14;
             // 
             // ConfirmacionTextBox
             // 
@@ -529,7 +534,7 @@
             this.ConfirmacionTextBox.PasswordChar = '*';
             this.ConfirmacionTextBox.ReadOnly = true;
             this.ConfirmacionTextBox.Size = new System.Drawing.Size(195, 20);
-            this.ConfirmacionTextBox.TabIndex = 13;
+            this.ConfirmacionTextBox.TabIndex = 12;
             // 
             // iDRolComboBox
             // 
@@ -541,7 +546,7 @@
             this.iDRolComboBox.Location = new System.Drawing.Point(423, 46);
             this.iDRolComboBox.Name = "iDRolComboBox";
             this.iDRolComboBox.Size = new System.Drawing.Size(152, 21);
-            this.iDRolComboBox.TabIndex = 15;
+            this.iDRolComboBox.TabIndex = 4;
             this.iDRolComboBox.ValueMember = "IDRol";
             // 
             // correoTextBox
@@ -551,7 +556,11 @@
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.ReadOnly = true;
             this.correoTextBox.Size = new System.Drawing.Size(195, 20);
-            this.correoTextBox.TabIndex = 17;
+            this.correoTextBox.TabIndex = 16;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmUsuarios
             // 
@@ -577,7 +586,7 @@
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.usuarioBindingNavigator);
             this.Name = "FrmUsuarios";
-            this.Text = "Usuarios";
+            this.Text = "10";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsAplicacionComercialxsd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
@@ -586,6 +595,7 @@
             this.usuarioBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -631,5 +641,6 @@
         private System.Windows.Forms.ToolStripButton TsbEditar;
         private System.Windows.Forms.ToolStripButton TsbCancelar;
         private System.Windows.Forms.ToolStripButton TsbBuscar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
