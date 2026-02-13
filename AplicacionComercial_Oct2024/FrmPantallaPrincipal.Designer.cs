@@ -264,13 +264,15 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsbClientes,
             this.TsbProveedores,
             this.TsbProductos});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip1.Size = new System.Drawing.Size(32, 284);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -280,7 +282,7 @@
             this.TsbClientes.Image = ((System.Drawing.Image)(resources.GetObject("TsbClientes.Image")));
             this.TsbClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbClientes.Name = "TsbClientes";
-            this.TsbClientes.Size = new System.Drawing.Size(23, 22);
+            this.TsbClientes.Size = new System.Drawing.Size(29, 20);
             this.TsbClientes.Text = "Clientes";
             this.TsbClientes.ToolTipText = "Clientes";
             this.TsbClientes.Click += new System.EventHandler(this.TsbClientes_Click);
@@ -291,7 +293,7 @@
             this.TsbProveedores.Image = ((System.Drawing.Image)(resources.GetObject("TsbProveedores.Image")));
             this.TsbProveedores.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbProveedores.Name = "TsbProveedores";
-            this.TsbProveedores.Size = new System.Drawing.Size(23, 22);
+            this.TsbProveedores.Size = new System.Drawing.Size(21, 20);
             this.TsbProveedores.Text = "Proveedores";
             this.TsbProveedores.ToolTipText = "Proveedores";
             this.TsbProveedores.Click += new System.EventHandler(this.TsbProveedores_Click);
@@ -302,7 +304,7 @@
             this.TsbProductos.Image = ((System.Drawing.Image)(resources.GetObject("TsbProductos.Image")));
             this.TsbProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsbProductos.Name = "TsbProductos";
-            this.TsbProductos.Size = new System.Drawing.Size(23, 22);
+            this.TsbProductos.Size = new System.Drawing.Size(21, 20);
             this.TsbProductos.Text = "Proveedores";
             this.TsbProductos.ToolTipText = "Productos";
             this.TsbProductos.Click += new System.EventHandler(this.TsbProductos_Click);
@@ -321,6 +323,7 @@
             this.Text = "Pantalla Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPantallaPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.FrmPantallaPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
